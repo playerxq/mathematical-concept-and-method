@@ -13,14 +13,14 @@
 using namespace std;
 char n[1005];
 int head[2] = {6,4};
-int a[10] = {1,1,2,6,4,6,6,2,6,4};
+int a[10] = {1,1,2,6,4,6,6,2,6,4};//去掉5之后0~9的阶乘的个位数
 int solve(char* n)
 {
 	int l = strlen(n);
 	int m = n[l-1]-'0';
 	int tail,A;
 	if(l>1)
-		A = head[(n[l-2]-'0') & 1];
+		A = head[(n[l-2]-'0') & 1];//10个数一组  分成n[l-2]-'0')组
 	if(m<5)
 	{
 		tail = a[m];
